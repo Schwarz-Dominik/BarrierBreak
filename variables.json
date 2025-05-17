@@ -1,0 +1,76 @@
+{
+  "color-mode-module": {
+    "default": "default",
+    "variants": [
+      {
+        "name": "default",
+        "variables": {
+          "--bg-color": "#ffffff",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      },
+      {
+        "name": "red-blind",
+        "variables": {
+          "--bg-color": "#ff0000",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      },
+      {
+        "name": "green-blind",
+        "variables": {
+          "--bg-color": "#00ff00",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      },
+      {
+        "name": "blue-blind",
+        "variables": {
+          "--bg-color": "#0000ff",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      },
+      {
+        "name": "color-weak",
+        "variables": {
+          "--bg-color": "#ff00ff",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      },
+      {
+        "name": "high-contrast",
+        "variables": {
+          "--bg-color": "#ffff00",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      }
+    ]
+  },
+  "dyslexia-mode-module": {
+    "default": "default",
+    "variable": "--font-family-base",
+    "variants": {
+      "default": "system-ui, sans-serif",
+      "dyslexia": "\"OpenDyslexic\", Arial, sans-serif"
+    }
+  },
+  "font-size-module": {
+    "variable": "--font-size-base",
+    "unit": "rem",
+    "min": 0.5,
+    "max": 3,
+    "default": 1
+  }
+}

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + Lit + TS</title>
+  <script type="module" src="/src/barrier-break.ts"></script>
+  <style>
+      @font-face {
+          font-family: OpenDyslexic;
+          src: local('./fonts/OpenDyslexic-Regular.woff'), url('./fonts/OpenDyslexic-Regular.woff') format('woff');
+      }
+
+      root {
+          --font-size-base: 1rem;
+          --font-family-base: system-ui, sans-serif;
+          --bg-color: #ffffff;
+          --text-color: #000000;
+          --link-color: #0066cc;
+          --line-height: 1.5;
+          --border: 1px solid #ccc;
+      }
+
+      *, option {
+          font-size: var(--font-size-base, 1rem);
+          font-family: var(--font-family-base, system-ui, sans-serif), serif;
+          color: var(--text-color, #000);
+          background: var(--bg-color, #fff);
+      }
+  </style>
+</head>
+<body>
+<barrier-break settings='
+{
+  "color-mode-module": {
+    "default": "default",
+    "variants": [
+      {
+        "name": "default",
+        "variables": {
+          "--bg-color": "#ffffff",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      },
+      {
+        "name": "red-blind",
+        "variables": {
+          "--bg-color": "#ffffff",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      },
+      {
+        "name": "green-blind",
+        "variables": {
+          "--bg-color": "#ffffff",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      },
+      {
+        "name": "blue-blind",
+        "variables": {
+          "--bg-color": "#ffffff",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      },
+      {
+        "name": "color-weak",
+        "variables": {
+          "--bg-color": "#ffffff",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      },
+      {
+        "name": "high-contrast",
+        "variables": {
+          "--bg-color": "#ffffff",
+          "--text-color": "#000000",
+          "--link-color": "#0066cc",
+          "--border": "1px solid #ccc"
+        }
+      }
+    ]
+  }
+}
+'>
+</barrier-break>
+<div class="modules-container">
+  <div class="module-box">
+    <p>Example</p>
+    <div>
+      <button class="module-box-round-button">+</button>
+      <button class="module-box-round-button">-</button>
+    </div>
+  </div>
+  <div class="module-box">
+    <p>Example 1234567890</p>
+    <div>
+      <select class="module-box-selection" style="font-family: var(--font-family-base, system-ui, sans-serif), serif;">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </div>
+  </div>
+  <div class="module-box">
+    <p>Example</p>
+    <div>
+      <button class="module-box-button">Button</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
